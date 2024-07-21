@@ -6,7 +6,7 @@ export const getAllUsers = async (req:Request, res:Response, next:NextFunction) 
     //Get all users 
     try {
         const users = await User.find();
-        return res.status(200).json({message:"OK", users});
+        return res.status(201).json({message:"OK", users});
     } catch (error) {
         return res.status(200).json({message:"ERROR", cause: error.message});
     }
