@@ -1,0 +1,14 @@
+{
+  "name": "mern-ai-chatbot",
+  "version": "1.0.0",
+  "description": "MERN Chatbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Saadan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
