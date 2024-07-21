@@ -14,6 +14,11 @@ app.use(express.json());
 //Remove in production. Error logging package
 app.use(morgan("dev"));
 
+// Testing API
+// app.get('/', (req, res) => {
+//     res.send('hello world')
+//   })
+
 app.use("/api/v1", appRouter);
 
 export default app;
