@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
 import { randomUUID } from "crypto";
 
+// Chat Schema; ID, Role, Content.
 const chatSchema = new mongoose.Schema({
     id:{
         type: String,
-        default: randomUUID(),
+        default: randomUUID(), //Unique Id to every chat.
     },
     role: {
         type: String,
@@ -16,6 +17,7 @@ const chatSchema = new mongoose.Schema({
     }, 
 })
 
+// User Schema; Name, Email, Password.
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -24,13 +26,13 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true,
+        unique: true,   // Email must be unique.
     },
     password: {
         type: String,
         required: true,
     },
-    chats:[chatSchema],
+    chats:[chatSchema], // Chat Schema for the above user.
 });
 
 export default mongoose.model("User", userSchema);
