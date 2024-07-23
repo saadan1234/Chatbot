@@ -11,11 +11,12 @@ const Header = () => {
                 <Logo />
                 <div>
                     {auth?.isLoggedIn? (<>
-                        <NavigationLink bg="#00fffc" to="/chat" text="Go To Chat" textColor="black"/>
-                        <NavigationLink bg="#51538f" textColor="while" to="/" text="logout" onClick={auth.logout}/>
+                        <NavigationLink bg="white
+                        " to="/chat" text="Go To Chat" textColor="black"/>
+                        <NavigationLink bg="white" textColor="black" to="/" text="logout" onClick={auth.logout}/>
                     </>) : (<>
-                        <NavigationLink bg="#00fffc" to="/login" text="Login" textColor="black"/>
-                        <NavigationLink bg="#51538f" textColor="while" to="/signup" text="Signup" />
+                        <NavigationLink bg="white" to="/login" text="Login" textColor="black" />
+                        <NavigationLink bg="white" textColor="black" to="/signup" text="Signup" />
                     </>)}
                 </div>           
             </Toolbar>

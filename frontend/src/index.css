@@ -8,10 +8,28 @@ html, body {
   font-family: "Roboto Slab", serif;
 } 
 
-.image-inverted {
-  filter: invert(100%);
+/* img {
+  filter: contrast(10%);
+} */
+
+.nav-link{
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  padding: 8px 20px;
+  text-decoration: none;
+  letter-spacing: 1px;
 }
 
-/* .nav-link{
-  font-
-} */
+.nav-link:hover {
+  background-color: #808080 !important;
+  color: black !important;
+}
+
+
+.MuiOutlinedInput-input-root.Mui-focused,
+.MuiOutlinedInput-notchedOutline {
+  border-color: white !important;
+}
