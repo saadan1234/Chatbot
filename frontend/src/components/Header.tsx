@@ -1,6 +1,5 @@
 import { AppBar, Toolbar } from "@mui/material";
-import React from "react";
-import Logo from "./shared/logo";
+import Logo from "./shared/Logo";
 
 const Header = () => {
     return (
@@ -9,8 +8,7 @@ const Header = () => {
                 <Logo />           
             </Toolbar>
         </AppBar>
-    )
-        
+    );  
 };
 
 export default Header;
