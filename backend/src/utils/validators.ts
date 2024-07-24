@@ -15,6 +15,7 @@ export const validate = (validations: ValidationChain[]) => {
             if(errors.isEmpty()){
                 return next();
             }
+            console.log(errors)
             return res.status(422).json({errors: errors.array()});
             // Returns the unproccessable content error with the error results.
     };
