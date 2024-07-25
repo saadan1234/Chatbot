@@ -32,7 +32,10 @@ export const loginValidator = [
 export const signupValidator = [
     body("name").notEmpty().withMessage("Name is required"),
     ...loginValidator,
-    ];
+];
 
+// Consists of the name, email and password and checks if the name is not empty.
+export const chatCompletionValidator = [
+    body("message").notEmpty().withMessage("Name is required"),
 
-    
+];

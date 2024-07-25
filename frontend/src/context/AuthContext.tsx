@@ -3,7 +3,7 @@ import { checkAuthStatus, loginUser } from "../helpers/api-communicator";
 
 type User = {
     name: string,
-    email: string
+    email: string,
 };
 
 type UserAuth = {
@@ -11,12 +11,12 @@ type UserAuth = {
     user: User | null;
     login: (email: string, password: string)=> Promise<void>;
     signup: (name: string, email: string, password: string) => Promise<void>;
-    logout: ()=> Promise<void>;
+    logout: () => Promise<void>;
 };
 
 const AuthContext = createContext<UserAuth | null>(null);
 
-export const AuthProvider = ({ children } :{children:  ReactNode }) => {
+export const AuthProvider = ({ children } :{ children:  ReactNode }) => {
     const [user, setUser] = useState<User | null>(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     useEffect(()=>{
