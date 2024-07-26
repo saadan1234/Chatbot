@@ -28,6 +28,10 @@ html, body {
   color: black !important;
 }
 
+.example::-webkit-scrollbar {
+  display: none;
+}
+
 
 .MuiOutlinedInput-input-root.Mui-focused,
 .MuiOutlinedInput-notchedOutline {

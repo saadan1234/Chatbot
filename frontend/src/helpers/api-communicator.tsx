@@ -20,13 +20,13 @@ export const signupUser = async (name: string, email:string, password: string) =
 
 export const checkAuthStatus = async () => {
     const res = await axios.get("/user/auth-status");
-    if(res.status!==200){
-        throw new Error("Unable to authenticate.");
+    if (res.status !== 200) {
+      throw new Error("Unable to authenticate");
     }
     const data = await res.data;
     return data;
-};
-
+  };
+  
 export const sendChatRequest = async (message:string) => {
     const res = await axios.post("/chat/new", {message});
     if(res.status!==200){

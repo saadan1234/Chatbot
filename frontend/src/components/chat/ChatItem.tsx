@@ -33,7 +33,7 @@ const ChatItem = ({content, role}: {content: string, role: "user" | "assistant"}
     const messageBlocks = extractCodeFromString(content);
     const auth = useAuth();
     return role === "assistant" ? 
-    <Box sx={{display: "flex", p:2, bgcolor: "black", my: 2, gap: 2}}>
+    <Box sx={{borderRadius: 3, display: "flex", p:2, bgcolor: "#c0c0c0", my: 2, gap: 2, alignItems: "center"}}>
         <Avatar sx={{ml: "0", }}>
             <img src="openai.png" alt="openai" width={"30px"}/>
         </Avatar>
@@ -44,8 +44,8 @@ const ChatItem = ({content, role}: {content: string, role: "user" | "assistant"}
             {block}
         </SyntaxHighlighter> : <Typography sx={{fontSize: "20px"}}>{block}</Typography> )) }
         </Box>
-    </Box> : <Box sx={{display: "flex", p:2, bgcolor: "black", my: 2, gap: 2}}>
-        <Avatar sx={{ml: "0", bgcolor: "black", color: "white"}}>
+    </Box> : <Box sx={{borderRadius: 3,display: "flex", p:2, bgcolor: "black", my: 2, gap: 2, alignItems: "center"}}>
+        <Avatar sx={{ml: "0", bgcolor: "white", color: "black"}}>
             {auth?.user?.name[0]}
         </Avatar>
         <Box>
