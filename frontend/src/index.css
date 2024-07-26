@@ -36,6 +36,7 @@ html, body {
 
 .rotate {
   animation: rotation 8s infinite linear;
+  filter: invert(100%);
 }
 
 @keyframes rotation {

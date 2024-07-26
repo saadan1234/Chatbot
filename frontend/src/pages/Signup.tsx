@@ -31,13 +31,13 @@ useEffect(()=>{
   return (
     <Box width={"100%"} height={"100%"} display={"flex"} flex={1}>
       <Box padding={1} mt={1} display={{md:"flex", sm:"none", xs:"none"}}>
-      <img className='form-pic' src="/robotsticker.png" alt="front-page" style={{width:"400px"}} />
+      <img className='form-pic' src="laptop.jpg" alt="front-page" style={{width:"600px"}} />
       </Box>
-      <Box display={'flex'} flex={{ xs: 1, md: 0.5}} justifyContent={'center'} alignItems={'center'} padding={2} ml={'auto'} mt={16}>
-        <form onSubmit={handleSubmit} style={{margin: 'auto', padding: '30px', boxShadow: '10px 10px 20px #000', borderRadius: '10px', border: 'none'}}>
+      <Box display={'flex'} flex={{ xs: 1, md: 0.5}} justifyContent={'center'} alignItems={'center'} padding={2} ml={'auto'}>
+        <form onSubmit={handleSubmit} style={{margin: 'auto', padding: '30px', boxShadow: '5px 5px 10px #808080', borderRadius: '10px', border: 'none'}}>
           <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center"} }>
-            <Typography variant='h4' textAlign="center"  padding={2} fontWeight={600}>Signup</Typography>
-            <CustomizedInput type="text" name="name" label="name"/>
+            <Typography variant='h4' textAlign="center"  padding={1} fontWeight={500}>Signup</Typography>
+            <CustomizedInput type="text" name="name" label="Name"/>
             <CustomizedInput type="email" name="email" label="Email"/>
             <CustomizedInput type="password" name="password" label="Password"/>
             <Button type="submit" 
