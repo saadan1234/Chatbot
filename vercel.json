@@ -9,19 +9,27 @@
         }
       },
       {
-        "src": "backend/index.js",
+        "src": "backend/src/index.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/api/(.*)",
-        "dest": "/backend/index.js"
+        "dest": "/backend/src/index.js"
       },
       {
         "src": "/(.*)",
         "dest": "/frontend/build/$1"
       }
-    ]
+    ],
+    "build": {
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "commands": {
+        "build": "cd backend && npm install && npm run dev && cd ../frontend && npm install && npm run build"
+      }
+    }
   }
   
